@@ -4,3 +4,4 @@ Keras==2.2.4
 numpy==1.16.1
 Pillow==5.4.1
 tqdm==4.31.1
+wget==3.2

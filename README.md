@@ -12,13 +12,15 @@ This is, admittedly, a rather strange task. Online pornography represents a grea
 
 We developed this model as part of a larger effort to train unsupervised, semantically rich representations of pornographic images. Our first attempts at doing this were hampered by the varied and diverse "background sets" of pornographic imagery. Trained representations were just as likely to encode the color of the carpet or the grass and trees in the background as the explicit "human action" we were interested in. We therefore became interested in finding ways to isolate the sexually explicit parts of an image and came up with this. Although the task is niche, we're putting the model out there in case someone else might find it useful.
 
+**SE Seg is not a skin segmenter.** Skin segmenters only find skin, so the resulting masks will not capture clothing, hair, eyes, or teeth. Once a person is identified as sexually explicit in an image, SE Seg will segment out the entire person, clothes, hair, and all, to the best of its ability given the available training data. 
+
 # Model
 
 SE Seg uses a UNET architecture with a 152-layer SE-ResNet pretrained on ImageNet as the backbone. During training, the encoder weights are frozen and only the decoder weights are updated. 
 
 # Data
 
-The training data consists of 806 manually annotated images. Model performance is validated on 202 manually annotated test images. The objective function is a of the Intersection over Union and the binary cross entropy when comparing the model output to the ground truth. 
+The training data consists of 806 manually annotated images. Model performance is validated on 202 manually annotated test images. The objective function is a combination of the Intersection over Union and the binary cross entropy when comparing the model output to the ground truth. 
 
 # The Concept of Sexual Explicitness
 

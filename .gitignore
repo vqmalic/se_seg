@@ -1,6 +1,6 @@
 checkpoint/
 outputs/
-docimages/
+hidden/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

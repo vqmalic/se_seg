@@ -46,7 +46,7 @@ This segments all images in the directory `inputs`. Results are written to the d
 <p align="center">
 	<img src="https://raw.githubusercontent.com/vqmalic/se_seg/master/docs/img02.jpg">
 	<br>
-	<em>Original image, "se" output, "nse" output, "mask" output at threshold=50.</em>
+	<em>Original image, "se" output, "nse" output, "mask" output at mask_color=127,127,127 and threshold=50.</em>
 </p>
 
 ## Model

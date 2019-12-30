@@ -4,6 +4,7 @@ A segmentation model that takes an input image and assigns each pixel a label in
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/vqmalic/se_seg/master/docs/img01.jpg">
+	*From left to right: blurred original images, ground truth, SE segmentation output. Original images are blurred just to keep documentation SFW, output represents output when unblurred images are provided as input.* 
 </p>
 
 This is, admittedly, a rather strange task. Online pornography represents a great wealth of visual material that may be used in machine learning, but the vast majority of existing efforts focus simply on designating a given image as a whole as sexually explicit (or "NSFW") for the purposes of filtering out undesriable images in applications. This model instead identifies the areas of an image that are sexually explicit, and those which are not. 

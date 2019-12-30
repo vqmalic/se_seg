@@ -1,6 +1,8 @@
 # SE Segmentation
 
-A segmentation model that takes an input image and assigns each pixel a label indicating if that pixel belongs, or does not belong, to a sexually explicit depiction. 
+A segmentation model that takes an input image and assigns each pixel a label indicating if that pixel belongs, or does not belong, to a sexually explicit depiction.
+
+![SE Segmentation outputs](https://raw.githubusercontent.com/vqmalic/se_seg/master/docs/img01.jpg) 
 
 This is, admittedly, a rather strange task. Online pornography represents a great wealth of visual material that may be used in machine learning, but the vast majority of existing efforts focus simply on designating a given image as a whole as sexually explicit (or "NSFW") for the purposes of filtering out undesriable images in applications. This model instead identifies the areas of an image that are sexually explicit, and those which are not. 
 

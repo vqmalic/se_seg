@@ -5,13 +5,20 @@ A segmentation model that takes an input image and assigns each pixel a label in
 <p align="center">
 	<img src="https://raw.githubusercontent.com/vqmalic/se_seg/master/docs/img01.jpg">
 	<br>
-	<em>From left to right: blurred original images, ground truth, SE segmentation output. Original images are blurred just to keep documentation SFW, output represents output when unblurred images are provided as input.</em>
+	<em>From left to right: blurred original test images, ground truth, SE segmentation output. Original images are blurred just to keep documentation SFW, output column shows output when unblurred images are provided as input.</em>
 </p>
 
 This is, admittedly, a rather strange task. Online pornography represents a great wealth of visual material that may be used in machine learning, but the vast majority of existing efforts focus simply on designating a given image as a whole as sexually explicit (or "NSFW") for the purposes of filtering out undesriable images in applications. This model instead identifies the areas of an image that are sexually explicit, and those which are not. 
 
 We developed this model as part of a larger effort to train unsupervised, semantically rich representations of pornographic images. Our first attempts at doing this were hampered by the varied and diverse "background sets" of pornographic imagery. Trained representations were just as likely to encode the color of the carpet or the grass and trees in the background as the explicit "human action" we were interested in. We therefore became interested in finding ways to isolate the sexually explicit parts of an image and came up with this. Although the task is niche, we're putting the model out there in case someone else might find it useful.
 
+# Model
+
+SE Seg uses a UNET architecture with a 152-layer SE-ResNet pretrained on ImageNet as the backbone. During training, the encoder weights are frozen and only the decoder weights are updated. 
+
+# Data
+
+The training data consists of 806 manually annotated images. Model performance is validated on 202 manually annotated test images. The objective function is a of the Intersection over Union and the binary cross entropy when comparing the model output to the ground truth. 
 
 # The Concept of Sexual Explicitness
 

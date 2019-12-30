@@ -4,6 +4,7 @@ A segmentation model that takes an input image and assigns each pixel a label in
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/vqmalic/se_seg/master/docs/img01.jpg">
+	<br>
 	<em>From left to right: blurred original images, ground truth, SE segmentation output. Original images are blurred just to keep documentation SFW, output represents output when unblurred images are provided as input.</em>
 </p>
 

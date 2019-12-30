@@ -43,6 +43,12 @@ This segments all images in the directory `inputs`. Results are written to the d
 * `--mask_color` - A comma delimited string of RGB values. if `se` or `nse` is an argument to `--output_type`, this determines the color of the areas that are masked. Defaults to `127,127,127`.  
 * `--threshold` - An integer between 0 and 100. The model assigns scores to each pixel representing its confidence that the pixel is sexually explicit. `--threshold` determines the cutoff above which a pixel will be labeled SE. This argument can be omitted, in which case output types of `se` and `nse` will use the model output as an opacity mask and the `mask` output type will generate a grayscale image ranging from black (a score of 0) to white (a score of 100). 
 
+<p align="center">
+	<img src="https://raw.githubusercontent.com/vqmalic/se_seg/master/docs/img02.jpg">
+	<br>
+	<em>Original image, "se" output, "nse" output, "mask" output at threshold=50.</em>
+</p>
+
 ## Model
 
 SE Seg uses a UNET architecture with a 152-layer SE-ResNet pretrained on ImageNet as the backbone. During training, the encoder weights are frozen and only the decoder weights are updated. 

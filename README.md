@@ -26,6 +26,8 @@ We developed this model as part of a larger effort to train unsupervised, semant
 * tqdm==4.31.1
 * wget==3.2
 
+I'm immensely greatful to Github user [qubvel](https://github.com/qubvel) for their library [Segmentation Models](https://github.com/qubvel/segmentation_models). It's a fantastic tool and SE Seg is basically an out of the box usage of it with a specific dataset. 
+
 ### Command Line Example
 
 ```

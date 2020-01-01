@@ -51,6 +51,12 @@ This segments all images in the directory `inputs`. Results are written to the d
 	<em>Original image, "se" output, "nse" output, "mask" output at mask_color=127,127,127 and threshold=50.</em>
 </p>
 
+<p align="center">
+	<img src="https://raw.githubusercontent.com/vqmalic/se_seg/master/docs/img03.png">
+	<br>
+	<em>"se" output with mask_color=127,127,127 at no threshold (opacity map), threshold=25, threshold=50, and threshold=75.</em>
+</p>
+
 ## Model
 
 SE Seg uses a UNET architecture with a 152-layer SE-ResNet pretrained on ImageNet as the backbone. During training, the encoder weights are frozen and only the decoder weights are updated. 
